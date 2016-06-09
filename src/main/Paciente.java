@@ -1,17 +1,19 @@
+package main;
+
 /**
  * Created by wellingtonalvesdasneves on 5/10/16.
  */
 public class Paciente {
 
-    double peso;
-    double altura;
+    private double peso;
+    private double getAltura;
 
     public Paciente(double peso, double altura) {
         this.peso = peso;
-        this.altura = altura;
+        this.getAltura = altura;
     }
 
-    double calcularIMC(double peso, double altura){
+    public double calcularIMC(double peso, double altura){
         return (peso / (altura * altura));
     }
 
@@ -19,7 +21,7 @@ public class Paciente {
         String msg ="";
         double imc;
 
-        imc = calcularIMC(this.peso, this.altura);
+        imc = calcularIMC(this.peso, this.getAltura);
 
         if (imc < 16) {
             msg = "Baixo peso muito grave";
@@ -46,7 +48,7 @@ public class Paciente {
         return peso;
     }
 
-    public double getAltura() {
-        return altura;
+    public double getGetAltura() {
+        return getAltura;
     }
 }
